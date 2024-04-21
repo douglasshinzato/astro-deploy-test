@@ -1,0 +1,9 @@
+---
+const { title, href } = Astro.props
+---
+
+<button
+  class="rounded mt-5 text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-5 py-2.5 bg-dark-100 border-2 border-neutral-200 hover:bg-neutral-200 hover:text-dark-100 flex gap-1 items-center justify-center text-neutral-300 font-semibold"
+>
+  <a href={href}>{title}</a></button
+>

@@ -1,17 +1,42 @@
-<div class="md:grid md:items-center grid-cols-2 gap-12 mt-16">
-  <div class="mb-16 text-center md:text-left">
-    <h2 class="font-bold text-3xl text-neutral-200 mb-6">
-      FullStack Software Engineer
-    </h2>
-    <p class="text-lg leading-relaxed text-neutral-300 text-justify">
-      Desde pequeno sempre fui muito curioso e aficionado por informática e
-      tecnologia, mas meu interesse em me tornar um desenvolvedor começou em
-      2022.
+---
+import { Picture } from "astro:assets"
+import profilePicture from "../assets/images/profile.png"
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="About">
+  <section class="mt-20">
+    <h1
+      class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-neutral-200 text-center"
+    >
+      Olá!
+    </h1>
+    <p class="text-lg mt-4 text-neutral-300 text-center font-semibold">
+      Meu nome é Douglas Shinzato
     </p>
-    <p class="text-lg leading-relaxed text-neutral-300 text-justify">
-      Em 2023 iniciei minha jornada de transição de carreira da área de Direito
-      para Desenvolvimento de Software. Período onde venho solidificando meus
-      conhecimentos em HTML, CSS, JavaScript, React.js, Node.js, Astro e Python.
-    </p>
-  </div>
-</div>
+
+    <div class="md:grid md:items-center grid-cols-2 gap-12 mt-16">
+      <div class="mb-16 text-center md:text-left">
+        <h2 class="font-bold text-3xl text-neutral-200 mb-6">
+          FullStack Software Engineer
+        </h2>
+        <p class="text-lg leading-relaxed text-neutral-300 text-justify">
+          Desde pequeno sempre fui muito curioso e aficionado por informática e
+          tecnologia, mas meu interesse em me tornar um desenvolvedor começou em
+          2022.
+        </p>
+        <p class="text-lg leading-relaxed text-neutral-300 text-justify">
+          Em 2023 iniciei minha jornada de transição de carreira da área de
+          Direito para Desenvolvimento de Software. Período onde venho
+          solidificando meus conhecimentos em HTML, CSS, JavaScript, React.js,
+          Node.js, Astro e Python.
+        </p>
+      </div>
+      <Picture
+        src={profilePicture}
+        alt="Foto de Douglas"
+        class="max-w-md mx-auto"
+      />
+    </div>
+  </section>
+</Layout>

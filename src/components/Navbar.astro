@@ -1,0 +1,65 @@
+---
+const menuItens = [
+  {
+    title: "Inicio",
+    href: "/",
+  },
+  {
+    title: "Sobre",
+    href: "/about",
+  },
+  {
+    title: "Projetos",
+    href: "/Projetos",
+  },
+  {
+    title: "Contato",
+    href: "/contact",
+  },
+]
+---
+
+<header class="my-5">
+  <nav class="flex justify-between">
+    <span class="font-semibold text-2xl"
+      ><a href="/">shinzato</a><span class="text-cyan-400">.dev</span>
+    </span>
+    <ul class="flex flex-col lg:flex-row lg:gap-3">
+      {
+        menuItens.map((item) => (
+          <li class="hover:text-cyan-400 font-semibold">
+            <a href={item.href}>{item.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+    <!-- <button type="button" title="button" class="mobileMenuButton">
+      <div class="bar"></div>
+    </button> -->
+  </nav>
+  <!-- <div class="mobile-menu">
+    <ul>
+      <li>
+        <a href="#about"> Sobre</a>
+      </li>
+      <li>
+        <a href="#projects"> Projetos</a>
+      </li>
+      <li>
+        <a href="#technologies"> Tecnologias</a>
+      </li>
+      <li>
+        <a href="#contact"> Contato</a>
+      </li>
+    </ul>
+  </div> -->
+</header>
+
+<script>
+  const mobileMenuButton = document.querySelector(".mobileMenuButton")
+  const mobileMenu = document.querySelector(".mobile-menu")
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenuButton.classList.toggle("is-active")
+    mobileMenu.classList.toggle("is-active")
+  })
+</script>
