@@ -3,10 +3,9 @@ export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
-      colors: {
-        dark: {
-          100: "#191622",
-        },
+      backgroundImage: {
+        background: "url('./src/assets/images/background.jpg')",
+        backgroundMobile: "url('./src/assets/images/background-mobile.jpg')",
       },
     },
   },

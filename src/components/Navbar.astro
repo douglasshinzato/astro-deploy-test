@@ -40,11 +40,13 @@ const menuItens = [
         <MenuIcon class="w-8 h-8 text-neutral-300" />
       </div>
     </div>
-    <MenuItems class="hidden lg:flex">
-      <ul class="flex flex-col lg:flex-row lg:gap-5 mt-5 p-2 lg:pt-0">
+    <MenuItems class="relative hidden lg:flex">
+      <ul
+        class="absolute lg:static flex flex-col lg:flex-row lg:gap-5 mt-5 lg:mt-0 p-2 pr-4 lg:pt-0 text-end right-0 w-48 lg:w-full bg-zinc-950/30 backdrop-blur-sm shadow-md shadow-black outline outline-1 outline-zinc-300 rounded lg:outline-none lg:backdrop-blur-none lg:bg-transparent lg:shadow-none"
+      >
         {
           menuItens.map((item) => (
-            <li class="hover:text-zinc-500 text-lg ">
+            <li class="hover:text-zinc-400 text-xl">
               <a href={item.href}>{item.title}</a>
             </li>
           ))
